@@ -7,6 +7,9 @@ const mapStyles = {
   width: '100%',
   height: '100%'
 };
+const defaultMapOptions = {
+  fullscreenControl: false,
+};
 
 function App() {
   return (
@@ -27,6 +30,7 @@ export class MapContainer extends Component {
          lat: 60.1733244,
          lng: 24.9410248
         }}
+        defaultOptions={defaultMapOptions}
       />
     );
   }
