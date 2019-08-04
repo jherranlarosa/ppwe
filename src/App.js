@@ -21,7 +21,6 @@ export class MapContainer extends Component {
     return (
       <Map
         google={this.props.google}
-        disableDefaultUI: true
         zoom={14}
         style={mapStyles}
         initialCenter={{
