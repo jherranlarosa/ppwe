@@ -24,3 +24,5 @@ yarn-error.log*
 
 # top secret files including the confession of the Bodom murderer
 /ignore
+.firebaserc
+firebase.json
