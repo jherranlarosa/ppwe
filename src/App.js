@@ -9,6 +9,7 @@ const mapStyles = {
 };
 const defaultMapOptions = {
   fullscreenControl: false,
+  streetViewControl: false
 };
 
 function App() {
@@ -30,7 +31,7 @@ export class MapContainer extends Component {
          lat: 60.1733244,
          lng: 24.9410248
         }}
-        defaultOptions={defaultMapOptions}
+        options={defaultMapOptions}
       />
     );
   }
