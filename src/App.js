@@ -7,10 +7,6 @@ const mapStyles = {
   width: '100%',
   height: '100%'
 };
-const defaultMapOptions = {
-  fullscreenControl: false,
-  streetViewControl: false
-};
 
 function App() {
   return (
@@ -25,13 +21,13 @@ export class MapContainer extends Component {
     return (
       <Map
         google={this.props.google}
+        disableDefaultUI: true
         zoom={14}
         style={mapStyles}
         initialCenter={{
          lat: 60.1733244,
          lng: 24.9410248
         }}
-        options={defaultMapOptions}
       />
     );
   }
