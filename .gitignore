@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# top secret files including the confession of the Bodom murderer
+/ignore
