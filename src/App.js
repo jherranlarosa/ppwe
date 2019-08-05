@@ -22,7 +22,7 @@ export class MapContainer extends Component {
         google={this.props.google}
         zoom={14}
         style={mapStyles}
-        streetViewControl: false
+        streetViewControl: 'false'
         initialCenter={{
          lat: 60.1733244,
          lng: 24.9410248
