@@ -6,7 +6,7 @@ import apiConfig from './apikeys.js';
 const mapStyles = {
   width: '100%',
   height: '100%',
-  streetViewControl: 'disabled'
+  streetViewControl: false
 };
 
 function App() {
