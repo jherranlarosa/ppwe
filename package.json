@@ -2,7 +2,17 @@
   "name": "valo",
   "version": "0.1.1",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "babel": "^6.23.0",
+    "babel-preset-react-app": "^9.0.0",
+    "react": "^16.8.6",
+    "react-app": "^1.1.2",
+    "react-dev-utils": "^9.0.1",
+    "react-dom": "^16.8.6",
+    "react-google-maps": "^9.4.5",
+    "react-scripts": "^3.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
