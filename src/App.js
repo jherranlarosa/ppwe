@@ -9,13 +9,6 @@ const mapStyles = {
   streetViewControl: false
 };
 
-function App() {
-  return (
-    <div className="App">
-    </div>
-  );
-}
-
 export class MapContainer extends Component {
   render() {
     return (
@@ -35,3 +28,10 @@ export class MapContainer extends Component {
 export default GoogleApiWrapper({
 apiKey: apiConfig.googleApiKey
 })(MapContainer);
+
+function App() {
+  return (
+    <div className="App">
+    </div>
+  );
+}
