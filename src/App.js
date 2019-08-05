@@ -12,7 +12,6 @@ const mapStyles = {
 function App() {
   return (
     <div className="App">
-<h1>VALO</h1>
     </div>
   );
 }
