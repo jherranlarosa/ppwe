@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 import apiConfig from './apikeys.js';
+import { geolocated } from "react-geolocated";
 
 const mapStyles = {
   width: '100%',
