@@ -1,29 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
-import apiConfig from './apikeys.js';
+import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps"
 
-const mapStyles = {
-  width: '100%',
-  height: '100%',
+const defaultMapOptions = {
+  fullscreenControl: false,
+  streetViewControl: false,
+  mapTypeControl: false,
+  zoomControl: false,
 };
 
-export class MapContainer extends Component {
-  render() {
-    return (
-      <Map
-        google={this.props.google}
-        zoom={14}
-        style={mapStyles}
-        initialCenter={{
-         lat: 60.1733244,
-         lng: 24.9410248
-        }}
-      />
-    );
-  }
+function Map() {
+	return (
+		<GoogleMap
+			defaultZoom={10}
+			defaultCenter={{ lat: -34.397, lng: 150.644 }}
+			defaultOptions={defaultMapOptions}
+		/>
+		);
 }
 
-export default GoogleApiWrapper({
-apiKey: apiConfig.googleApiKey
-})(MapContainer);
+const MainScreenMap = withScriptjs(withGoogleMap(Map));
+
+export default function App() {
+	return (
+		<div style={{width: '100vw', height: '100vh'}}>
+			<MainScreenMap
+  				googleMapURL={'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAIcTSkJY2iEQkg4Llb6SSuMngPVbQShYQ'}
+  				loadingElement={<div style={{ height: `100%` }} />}
+  				containerElement={<div style={{ height: `100%` }} />}
+  				mapElement={<div style={{ height: `100%` }} />}
+  			/>
+  		</div>
+		);
+}
