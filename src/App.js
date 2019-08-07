@@ -33,7 +33,7 @@ function Map() {
 			defaultOptions={defaultMapOptions}
 		/>
 		);
-}
+};
 
 const MainScreenMap = withScriptjs(withGoogleMap(Map));
 
@@ -48,4 +48,4 @@ export default function App() {
   			/>
   		</div>
 		);
-}
+};
