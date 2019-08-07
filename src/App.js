@@ -1,22 +1,9 @@
 import React from 'react';
-import ReactDOM from "react-dom";
 import './App.css';
 import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps"
 // import PlacesAutocomplete, { geocodeByAddress, getLatLng, } from 'react-places-autocomplete';
-import { geolocated } from "react-geolocated";
-
-class LocateMe extends React.Component {
-	render() {
-		return !this.props.isGeoLocationAvailable ? (
-		console.log('GeoLoc ei saatavilla')
-		) : !this.props.isGeoLocationEnabled ? (
-		console.log('GeoLoc ei sallittu')
-		) : this.props.coords ? (
-		console.log(this.props.latitude, this.props.longitude)
-		) : (console.log('Lataa sijaintia')
-		);
-	};
-};
+// import { geolocated } from "react-geolocated";
+// import ReactDOM from "react-dom";
 
 const defaultMapOptions = {
   fullscreenControl: false,
