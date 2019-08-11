@@ -1,10 +1,53 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import './App.css';
+import BackGroundMap from './Map';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentLatLng: {
+        lat: 0,
+        lng: 0
+      },
+      isMarkerShown: false
+    }
+  }
 
-// Sit ku valmista nii tohon register
-serviceWorker.unregister();
+  showCurrentLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          console.log(position.coords);
+          this.setState(prevState => ({
+            currentLatLng: {
+              ...prevState.currentLatLng,
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            },
+            isMarkerShown: true
+          }))
+        }
+      )
+    } else {
+        return console.log('Vituiksmän');
+    }
+  }
+
+
+  componentDidMount() {
+    this.showCurrentLocation()
+  }
+
+  render() {
+    return (
+      <div>
+        <BackGroundMap
+          currentLocation={this.state.currentLatLng} />
+      </div>
+    );
+  }
+}
+
+render(<App />, document.getElementById('root'));
