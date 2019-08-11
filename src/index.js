@@ -26,7 +26,7 @@ class App extends Component {
               lat: position.coords.latitude,
               lng: position.coords.longitude
             },
-            isMarkerShown: true
+            isMarkerShown: false
           }))
         }
       )
@@ -42,10 +42,10 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <BackGroundMap
           currentLocation={this.state.currentLatLng} />
-      </div>
+      </>
     );
   }
 }

@@ -12,7 +12,7 @@ const defaultMapOptions = {
 const BackGroundMap = compose(
     withProps({
         googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyAIcTSkJY2iEQkg4Llb6SSuMngPVbQShYQ",
-        loadingElement: <div style={{ height: `100vw` }} />,
+        loadingElement: <div style={{ height: `100vh` }} />,
         containerElement: <div style={{ height: `100vh` }} />,
         mapElement: <div style={{ height: `100vh` }} />,
     }),
